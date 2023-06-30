@@ -15,3 +15,6 @@ Detallo los cambios principales conforme a cada entrega.
 - Crear proyecto
 - Script en python para obtener JSON de una API (contenido en ``/main.py``)
 - SQL para montar tabla en AWS Redshift (contenido en ``/pabloasd3_coderhouse.sql``)
+### Segunda Entrega (semana 7 del curso | 30/06)
+- Trasformación de datos
+- Insertar datos trasformados

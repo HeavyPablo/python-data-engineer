@@ -1,6 +1,8 @@
 import pandas as pd
 import requests
 
+from etl import Etl
+
 url = "https://jsonplaceholder.typicode.com/albums"
 
 
@@ -17,4 +19,4 @@ def get_data():
 
 if __name__ == "__main__":
     df = get_data()
-    print(df)
+    etl = Etl(pandas_df=df, table='albums')
