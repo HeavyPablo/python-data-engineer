@@ -1,7 +1,9 @@
 import pandas as pd
 import requests
-
+from dotenv import load_dotenv
 from etl import Etl
+
+load_dotenv()
 
 url = "https://jsonplaceholder.typicode.com/albums"
 
@@ -20,3 +22,4 @@ def get_data():
 if __name__ == "__main__":
     df = get_data()
     etl = Etl(pandas_df=df, table='albums')
+    etl.execute()
