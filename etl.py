@@ -1,6 +1,8 @@
-from os import environ as env
 from pyspark.sql import SparkSession
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def convert_to_spark(pandas_df):

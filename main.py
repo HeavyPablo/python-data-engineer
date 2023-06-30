@@ -1,9 +1,6 @@
 import pandas as pd
 import requests
-from dotenv import load_dotenv
 from etl import Etl
-
-load_dotenv()
 
 url = "https://jsonplaceholder.typicode.com/albums"
 
