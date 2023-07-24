@@ -1,22 +1,10 @@
-import pandas as pd
-import requests
-from etl import Etl
+from dotenv import load_dotenv
 
-url = "https://jsonplaceholder.typicode.com/albums"
+load_dotenv()
 
-
-def get_data():
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        json_data = response.json()
-
-        return pd.DataFrame(json_data)
-    else:
-        print("Error al obtener el JSON: ", response.status_code)
-
+from scripts.etl_albums import EtlAlbums
 
 if __name__ == "__main__":
-    df = get_data()
-    etl = Etl(pandas_df=df, table='albums')
-    etl.execute()
+    print("Corriendo script")
+    etl = EtlAlbums()
+    etl.run()
